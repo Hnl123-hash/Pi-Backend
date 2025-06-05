@@ -1,0 +1,30 @@
+{
+  "name": "projeto-integrador-backend",
+  "version": "1.0.0",
+  "description": "Back end para o projeto integrador do curso Sistemas para Internet da UFSM.",
+  "main": "app.js",
+  "scripts": {
+    "start": "ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrique Lavarda",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.0.2",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.21",
+    "install": "^0.13.0",
+    "npm": "^11.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
