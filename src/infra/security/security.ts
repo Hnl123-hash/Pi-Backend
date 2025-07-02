@@ -3,7 +3,7 @@ import { decodeToken, verificaAuth } from "../auth/jwtService";
 export const verificaAutorizacao = (
   token: string | undefined,
   roleNecessario: "ADMIN" | "USUARIO" | undefined,
-  permissaoNecessaria: string | undefined
+  permissaoNecessaria: "CRIAR" | "EDITAR" | "DELETAR" | undefined
 ) => {
   if (!token) return false;
   const tokenDecodificado = decodeToken(token);

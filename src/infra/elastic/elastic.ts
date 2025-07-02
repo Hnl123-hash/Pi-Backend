@@ -1,15 +1,21 @@
 import { Client } from "@elastic/elasticsearch";
-import { buscaFuzzy } from "./taxonomia/buscas/busca-fuzzy";
-import { buscaTodos } from "./taxonomia/buscas/busca-all";
-import { buscaFuzzyPaginado } from "./taxonomia/buscas/busca-fuzzy-paginado";
-import { buscaPorId } from "./taxonomia/buscas/busca-id";
-import { atualizaTaxonomia } from "./taxonomia/atualizacoes/atualiza-taxonomia";
+import { buscaFuzzy } from "./taxonomia/busca/busca-fuzzy";
+import { buscaTodos } from "./taxonomia/busca/busca-all";
+import { buscaFuzzyPaginado } from "./taxonomia/busca/busca-fuzzy-paginado";
+import { buscaPorId } from "./taxonomia/busca/busca-id";
+import { atualizaTaxonomia } from "./taxonomia/atualiza/atualiza-taxonomia";
 import { buscaPorEmail } from "./usuario/busca/busca-usuario";
 import { criaUsuario } from "./usuario/cria/cria-usuario";
 import { buscaUsuarios } from "./usuario/busca/busca-usuarios";
 import { deletaUsuario } from "./usuario/deleta/deleta-usuario";
 import { editaUsuario } from "./usuario/edita/edita-usuario";
 import { editaUsuarioSemSenha } from "./usuario/edita/edita-usuario-sem-senha";
+import { criaExemplar } from "./exemplares/cria/cria-exemplar";
+import { buscaTodosExemplares } from "./exemplares/busca/busca-todos";
+import { buscaExemplarPorNomePopular } from "./exemplares/busca/busca-nome-popular";
+import { atualizaExemplar } from "./exemplares/atualiza/atualiza";
+import { deletaExemplar } from "./exemplares/deleta/deleta";
+import { buscaExemplarPorNomeCientifico } from "./exemplares/busca/busca-nome-cientifico";
 
 let conexao: Client | null = null;
 
@@ -58,4 +64,10 @@ export const db = {
   deletaUsuario,
   editaUsuario,
   editaUsuarioSemSenha,
+  criaExemplar,
+  buscaTodosExemplares,
+  buscaExemplarPorNomePopular,
+  atualizaExemplar,
+  deletaExemplar,
+  buscaExemplarPorNomeCientifico,
 };

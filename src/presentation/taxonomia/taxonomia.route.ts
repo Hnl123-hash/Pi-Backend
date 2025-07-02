@@ -6,12 +6,12 @@ const taxonomiaRouter = Router();
 const basePath = "/taxonomia";
 
 taxonomiaRouter.get(basePath + "/dadosIniciais", async (req, res) => {
-  if (
-    !verificaAutorizacao(req.headers["authorization"], undefined, undefined)
-  ) {
-    res.status(401).json({ erro: "Sem autorização" });
-    return;
-  }
+  // if (
+  //   !verificaAutorizacao(req.headers["authorization"], undefined, undefined)
+  // ) {
+  //   res.status(401).json({ erro: "Sem autorização" });
+  //   return;
+  // }
 
   try {
     const dadosIniciais = await taxonomiaController.dadosIniciais({

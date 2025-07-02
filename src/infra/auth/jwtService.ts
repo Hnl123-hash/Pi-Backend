@@ -1,11 +1,10 @@
 import jwt from "jsonwebtoken";
 import { PayloadUsuario, UsuarioComID } from "./jwtService.types";
-import { UsuarioEntity } from "../../core/entities/usuario.entities";
 
 const CHAVE = "8621rt3ygkuasd";
 
 const assinaAuth = (payload: UsuarioComID) => {
-  return jwt.sign(payload, CHAVE, { expiresIn: "30m" });
+  return jwt.sign(payload, CHAVE, { expiresIn: "2h" });
 };
 
 const verificaAuth = (token: string) => {

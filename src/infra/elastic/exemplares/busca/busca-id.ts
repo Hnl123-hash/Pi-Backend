@@ -10,7 +10,13 @@ export const buscaPorId = async <T>(id: string, index: string): Promise<T> => {
     });
 
     if (response.found) {
-      return response._source as T;
+      if (response._source && typeof response._source === "object") {
+        return { ...response._source, id: response._id } as T;
+      } else {
+        throw new Error(
+          `O documento com ID ${id} não possui um _source válido.`
+        );
+      }
     } else {
       throw new Error(`Documento com ID ${id} não encontrado.`);
     }

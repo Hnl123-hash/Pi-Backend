@@ -1,5 +1,5 @@
 import { db } from "../../infra/elastic/elastic";
-import { comparaString, criptgrafaString } from "../../infra/hashing/hash";
+import { comparaString } from "../../infra/hashing/hash";
 import { UsuarioEntity } from "../entities/usuario.entities";
 
 export class UsuarioUseCase {
